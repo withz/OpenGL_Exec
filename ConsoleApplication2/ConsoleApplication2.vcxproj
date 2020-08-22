@@ -94,7 +94,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;assimp-vc142-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -144,17 +144,30 @@
   <ItemGroup>
     <ClCompile Include="..\OpenGL\src\glad.c" />
     <ClCompile Include="ConsoleApplication2.cpp" />
-    <ClCompile Include="shader.cpp" />
+    <ClCompile Include="data.cpp" />
+    <ClCompile Include="material.cpp" />
+    <ClCompile Include="model.h" />
+    <ClCompile Include="opengl_manager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="data.h" />
+    <ClInclude Include="entity.h" />
+    <ClInclude Include="light.h" />
+    <ClInclude Include="material.h" />
+    <ClInclude Include="opengl_manager.h" />
     <ClInclude Include="shader.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="fragment-shader.glsl" />
-    <None Include="vertex-shader.glsl" />
+    <None Include="entity-fs.glsl" />
+    <None Include="entity-vs.glsl" />
+    <None Include="light-fs.glsl" />
+    <None Include="light-vs.glsl" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="container.jpg" />
+    <Image Include="container2.jpg" />
+    <Image Include="container2_specular.jpg" />
     <Image Include="wall.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,9 +1,2 @@
 ﻿  ConsoleApplication2.cpp
-E:\Projects\VS2019\GLFW\test2\Opengl\ConsoleApplication2\ConsoleApplication2.cpp(292,27): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-E:\Projects\VS2019\GLFW\test2\Opengl\ConsoleApplication2\ConsoleApplication2.cpp(461,23): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-E:\Projects\VS2019\GLFW\test2\Opengl\ConsoleApplication2\ConsoleApplication2.cpp(489,18): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-E:\Projects\VS2019\GLFW\test2\Opengl\ConsoleApplication2\ConsoleApplication2.cpp(490,18): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-E:\Projects\VS2019\GLFW\test2\Opengl\ConsoleApplication2\ConsoleApplication2.cpp(491,14): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-E:\Projects\VS2019\GLFW\test2\Opengl\ConsoleApplication2\ConsoleApplication2.cpp(492,14): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-E:\Projects\VS2019\GLFW\test2\Opengl\ConsoleApplication2\ConsoleApplication2.cpp(524,17): warning C4244: “-=”: 从“double”转换到“float”，可能丢失数据
   ConsoleApplication2.vcxproj -> E:\Projects\VS2019\GLFW\test2\Opengl\Debug\ConsoleApplication2.exe

@@ -20,7 +20,16 @@
     <ClCompile Include="..\OpenGL\src\glad.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="shader.cpp">
+    <ClCompile Include="opengl_manager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="data.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="model.h">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="material.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -28,12 +37,36 @@
     <ClInclude Include="shader.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="material.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="light.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="opengl_manager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="data.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="entity.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="fragment-shader.glsl">
+    <None Include="light-vs.glsl">
       <Filter>源文件</Filter>
     </None>
-    <None Include="vertex-shader.glsl">
+    <None Include="light-fs.glsl">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="entity-vs.glsl">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="entity-fs.glsl">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>
@@ -42,6 +75,12 @@
       <Filter>Resources</Filter>
     </Image>
     <Image Include="wall.jpg">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="container2.jpg">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="container2_specular.jpg">
       <Filter>Resources</Filter>
     </Image>
   </ItemGroup>
