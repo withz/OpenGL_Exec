@@ -52,6 +52,7 @@ int OpenglManager::init(const char* title, int width, int height)
     // Default Setting
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
     glEnable(GL_DEPTH_TEST);
+    //glEnable(GL_CULL_FACE);
 
     // Fill or Line
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);

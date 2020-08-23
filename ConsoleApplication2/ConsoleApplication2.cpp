@@ -48,7 +48,7 @@ int main()
     log_out("Prepare Data...");
     Entity entity;
     entity.SetPosition(glm::vec3(0.0f, 0.0f, -13.0f));
-    entity.SetRotate(15, glm::vec3(0.0f, 0.0f, 1.0f));
+    entity.SetRotate(45, glm::vec3(0.0f, 1.0f, 1.0f));
     entity.SetScale(glm::vec3(5.0f, 5.0f, 5.0f));
 
     Light light;
@@ -60,12 +60,15 @@ int main()
     material.use(0);
     material_sp.use(1);
 
+    //Model model((char*)"cyborg/cyborg.obj");
+
     shader.use();
     shader.setInt("diffuseTexture", 0);
     shader.setInt("specularTexture", 1);
 
     // Main Loop
     log_out("Main Loop Start");
+    float time = 0;
     while (!glfwWindowShouldClose(window)) {
         // Input
         OpenglManager::onKeyboardCallback(window);
@@ -77,11 +80,13 @@ int main()
         // View
         glm::mat4 view = camera.GetViewMatrix();
         glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)manager->width / manager->height, 0.1f, 100.0f);
-        
+
+        entity.SetRotate((glfwGetTime() - time) * 10.0f, glm::vec3(1.0f, 1.0f, entity.Position.z));
+        time = glfwGetTime();
 
         // Shader Color
         shader.use();
-        shader.setFloat("material.ambient", 1.0f, 0.5f, 0.31f);
+        shader.setFloat("material.ambient", 1.0f, 1.0f, 1.0f);
         shader.setFloat("material.diffuse", 1.0f, 1.0f, 1.0f);
         shader.setFloat("material.specular", 10.0f, 10.0f, 10.0f);
         shader.setFloat("material.shininess", 32.0f);
@@ -99,6 +104,8 @@ int main()
         glBindVertexArray(entity.VAO);
         glDrawArrays(GL_TRIANGLES, 0, 36);
 
+        //model.Draw(shader);
+
         light_shader.use();
         light_shader.setMatrixFloat4("transform", glm::mat4(1.0f));
         light_shader.setMatrixFloat4("model", light.State);
@@ -106,8 +113,8 @@ int main()
         light_shader.setMatrixFloat4("projection", projection);
         light_shader.setFloat("Color", light.Color);
 
-        glBindVertexArray(light.VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
+        //glBindVertexArray(light.VAO);
+        //glDrawArrays(GL_TRIANGLES, 0, 36);
         //glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
         //for (int i = 0;i < 10;i++) {

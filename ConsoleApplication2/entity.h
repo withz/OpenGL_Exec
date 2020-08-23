@@ -8,7 +8,7 @@
 #include "model.h"
 #include "data.h"
 
-class Entity : Model 
+class Entity 
 {
 public:
     glm::vec3 Position = glm::vec3(0.0f, 0.0f, 0.0f);

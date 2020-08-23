@@ -9,7 +9,7 @@
 #include "data.h"
 
 
-class Light : Model
+class Light
 {
 public:
     glm::vec3 Position = glm::vec3(0.0f, 0.0f, 0.0f);

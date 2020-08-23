@@ -1,2 +1,7 @@
-﻿  ConsoleApplication2.cpp
+﻿  opengl_manager.cpp
+E:\Projects\VS2019\GLFW\test2\Opengl\ConsoleApplication2\opengl_manager.cpp(90,22): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+E:\Projects\VS2019\GLFW\test2\Opengl\ConsoleApplication2\opengl_manager.cpp(91,32): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+E:\Projects\VS2019\GLFW\test2\Opengl\ConsoleApplication2\opengl_manager.cpp(120,47): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+E:\Projects\VS2019\GLFW\test2\Opengl\ConsoleApplication2\opengl_manager.cpp(120,35): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+E:\Projects\VS2019\GLFW\test2\Opengl\ConsoleApplication2\opengl_manager.cpp(129,31): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
   ConsoleApplication2.vcxproj -> E:\Projects\VS2019\GLFW\test2\Opengl\Debug\ConsoleApplication2.exe

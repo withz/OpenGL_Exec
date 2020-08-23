@@ -74,6 +74,7 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>E:\Projects\VS2019\GLFW\test2\Opengl\OpenGL\include;$(IncludePath)</IncludePath>
     <LibraryPath>E:\Projects\VS2019\GLFW\test2\Opengl\OpenGL\lib-vc2019;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -94,7 +95,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;assimp-vc142-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;assimp-vc142-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -143,18 +145,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\OpenGL\src\glad.c" />
+    <ClCompile Include="asset.cpp" />
     <ClCompile Include="ConsoleApplication2.cpp" />
     <ClCompile Include="data.cpp" />
     <ClCompile Include="material.cpp" />
+    <ClCompile Include="model.cpp" />
     <ClCompile Include="model.h" />
     <ClCompile Include="opengl_manager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="asset.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="data.h" />
     <ClInclude Include="entity.h" />
     <ClInclude Include="light.h" />
     <ClInclude Include="material.h" />
+    <ClInclude Include="mesh.h" />
     <ClInclude Include="opengl_manager.h" />
     <ClInclude Include="shader.h" />
   </ItemGroup>
@@ -163,6 +169,8 @@
     <None Include="entity-vs.glsl" />
     <None Include="light-fs.glsl" />
     <None Include="light-vs.glsl" />
+    <None Include="mesh-fs.glsl" />
+    <None Include="mesh-vs.glsl" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="container.jpg" />

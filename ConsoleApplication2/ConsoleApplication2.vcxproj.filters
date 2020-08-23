@@ -32,6 +32,12 @@
     <ClCompile Include="material.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="asset.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="model.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -55,6 +61,12 @@
     <ClInclude Include="entity.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="asset.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="light-vs.glsl">
@@ -67,6 +79,12 @@
       <Filter>源文件</Filter>
     </None>
     <None Include="entity-fs.glsl">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="mesh-vs.glsl">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="mesh-fs.glsl">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>
